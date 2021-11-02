@@ -55,9 +55,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-let svar = '1999';
-Number(svar);
-console.log(svar);
+let year = Number('1999');
+console.log(year);
 
 
 /*
@@ -137,7 +136,7 @@ function hungryDog(weight, age){
   }else if (age < 0.583 && age >= 0.333){
     return weight * 0.05;
   }else if (age < 0.333){
-    return weight * 0.01
+    return weight * 0.1
   }
 }
 console.log('task 3', hungryDog(15,1));
@@ -176,19 +175,19 @@ if (computer === 0){
 
 function game(user, computer){
   if (user === 'rock' && computer === 'scissors'){
-    return 'You win!';
+    return 'you win!';
   }else if (user === 'rock' && computer === 'paper'){
-    return 'You lose!';
+    return 'you lose!';
   }else if (user === 'paper' && computer === 'rock'){
-    return 'You win!'
+    return 'you win!'
   }else if (user === 'paper' && computer === 'scissors'){
-    return 'You lose!';
+    return 'you lose!';
   }else if (user === 'scissors' && computer === 'rock'){
-    return 'You lose!'
+    return 'you lose!'
   }else if (user === 'scissors' && computer === 'paper'){
-    return 'You win!';
+    return 'you win!';
   }else{
-    return 'Its a tie!'
+    return `it's a tie`
   }
 
 }
@@ -207,10 +206,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(km){
   /*add your code here*/
-
+  return km * 0.621371;
 }
+console.log(miles(100));
 
 
 
@@ -222,9 +222,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48
 }
+console.log(feet(1000));
 
 
 
@@ -238,9 +239,15 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
-}
+function annoyingSong(number){
+  for (let i = number; i > 0; i--){
+      return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number - 1} bottles of soda on the wall`;
+      }
+    }
+
+  console.log(annoyingSong(5));
+
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -258,10 +265,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
+function grade(score){
 /*Your Code here */
+if (score >= 90){
+  return 'you got an A';
+}else if (score >= 80){
+  return 'you got a B';
+}else if (score >= 70){
+  return 'you got a C';
+}else if (score >= 60){
+  return 'you got a D';
+}else {
+  return 'you got an F';
 }
-
+}
+console.log(grade(80));
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
