@@ -19,7 +19,10 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 18;
+if (votingAge >= 18){
+  console.log('true')
+}
 
 
 /*
@@ -32,8 +35,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let var1 = 1;
+let var2 = 2;
+if (var2 === 2){
+  var1 = 5;
+  console.log(var1);
+}
 
 
 
@@ -48,7 +55,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let svar = '1999';
+Number(svar);
+console.log(svar);
 
 
 /*
@@ -60,9 +69,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
+function multiply(num1, num2){
   /*add your code here*/
+  return num1 * num2;
 }
+console.log(multiply(5, 10));
 
 
 
@@ -76,9 +87,12 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+function dogYears(age){
   /*add your code here*/
+  return age * 7;
 }
+
+console.log(dogYears(10));
 
 
 
@@ -149,10 +163,36 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.floor(Math.random() * 3);
+
+
+if (computer === 0){
+  computer = 'rock';
+}else if (computer === 1){
+  computer = 'paper';
+}else{
+  computer = 'scissors';
+}
 
 function game(user, computer){
-  /*add your code here*/
+  if (user === 'rock' && computer === 'scissors'){
+    return 'You win!';
+  }else if (user === 'rock' && computer === 'paper'){
+    return 'You lose!';
+  }else if (user === 'paper' && computer === 'rock'){
+    return 'You win!'
+  }else if (user === 'paper' && computer === 'scissors'){
+    return 'You lose!';
+  }else if (user === 'scissors' && computer === 'rock'){
+    return 'You lose!'
+  }else if (user === 'scissors' && computer === 'paper'){
+    return 'You win!';
+  }else{
+    return 'Its a tie!'
+  }
+
 }
+console.log(game('rock', computer));
 
 
 
@@ -169,6 +209,7 @@ Using the miles function below do the following:
 
 function miles(/*add your code here*/){
   /*add your code here*/
+
 }
 
 
